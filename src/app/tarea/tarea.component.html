@@ -1,0 +1,18 @@
+<div class="tarea-card">
+    <img class="img-header" *ngIf="tarea.img" [src]="tarea.img" alt="img header">
+    <div class="info-container">
+      <h4>{{ tarea.titulo }}</h4>
+      
+      <p class="fecha" [ngClass]="{'rojo': tareaVencida(), 'verde': tareaFinalizada(), 'taronja': proximVenciment(), 'gris': !tarea.fechaFin }">
+        {{ tarea.fechaFin | date:'dd/MM/yyyy' }}
+      </p>
+    
+      <div *ngIf="tarea.usuarios && tarea.usuarios.length > 0">
+        <div class="div-usu" *ngFor="let usuario of tarea.usuarios">
+          <img class="img-usu" [src]="usuario.img" [alt]="usuario.alt">
+          <span class="nick-hover">{{ usuario.nick }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  

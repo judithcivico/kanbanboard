@@ -1,0 +1,28 @@
+.card-container {
+    margin: 30px;
+    display: table-row;
+}
+
+.card-container h2 {
+    text-align: center;
+}
+
+.nueva-tarea {
+    background-color: rgb(206, 206, 206);
+    padding: 10px 10px;
+    margin: 10px 10px;
+    width: 482px;
+    height: 50px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.nueva-tarea:hover{
+    box-shadow: 0 2px 10px rgba(14, 14, 14, 0.5); 
+    cursor: pointer;
+}
+
+.nueva-tarea p{
+    padding: 0 20px;
+    font-weight: 500;
+}

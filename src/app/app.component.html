@@ -1,0 +1,11 @@
+<div class="card-container" *ngFor="let lista of listas">
+    <h2>{{ lista }}</h2>
+    
+  <div class="info-container" *ngFor="let tarea of tareas">
+    <app-tarea *ngIf="tarea.lista === lista" [tarea]="tarea"></app-tarea>
+  </div>
+  <div class="nueva-tarea" (click)="toggleFormulario()">
+    <p> + Añadir nueva tarea</p>
+    <app-tarea-form *ngIf="mostrarFormulario"></app-tarea-form>
+  </div>
+</div>
